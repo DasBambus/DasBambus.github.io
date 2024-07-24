@@ -113,3 +113,12 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+#search {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
