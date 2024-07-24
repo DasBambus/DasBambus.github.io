@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const postForm = document.getElementById('post-form');
-    const blogPostsSection = document.getElementById('blog-posts');
+    const blogPostsSection = document.getElementById('blog-list');
+    const projectsSection = document.getElementById('project-list');
     const projects = [
         { title: "Projekt 1", description: "Beschreibung des Projekts 1" },
         { title: "Projekt 2", description: "Beschreibung des Projekts 2" },
@@ -34,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function displayProjects() {
-        const projectList = document.getElementById('project-list');
         projects.forEach(project => {
             const projectDiv = document.createElement('div');
             projectDiv.className = 'project';
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
             projectDiv.appendChild(projectTitle);
             projectDiv.appendChild(projectDescription);
 
-            projectList.appendChild(projectDiv);
+            projectsSection.appendChild(projectDiv);
         });
     }
 
