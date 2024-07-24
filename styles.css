@@ -127,13 +127,44 @@ main {
     margin-top: 50px;
 }
 
+#projects h2, #blog-posts h2, #new-post h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+    border-bottom: 2px solid #ff6600;
+    display: inline-block;
+}
+
+#project-list, #blog-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project, .blog-post {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.project:hover, .blog-post:hover {
+    transform: translateY(-10px);
+}
+
 #new-post h2 {
+    text-align: center;
     margin-top: 0;
 }
 
 #post-form {
     display: flex;
     flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 #post-form input,
@@ -157,21 +188,23 @@ main {
     background-color: #555;
 }
 
-.blog-post {
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.blog-post h3 {
-    margin-top: 0;
-}
-
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 1em 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff8500;
 }
