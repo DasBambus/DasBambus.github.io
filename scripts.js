@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const postForm = document.getElementById('post-form');
     const blogPostsSection = document.getElementById('blog-posts');
-    const searchInput = document.getElementById('search');
     const projects = [
         { title: "Projekt 1", description: "Beschreibung des Projekts 1" },
         { title: "Projekt 2", description: "Beschreibung des Projekts 2" },
@@ -16,21 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
         addBlogPost(title, content);
 
         postForm.reset();
-    });
-
-    searchInput.addEventListener('input', () => {
-        const searchTerm = searchInput.value.toLowerCase();
-        const blogPosts = document.querySelectorAll('.blog-post');
-        
-        blogPosts.forEach(post => {
-            const title = post.querySelector('h3').textContent.toLowerCase();
-            const content = post.querySelector('p').textContent.toLowerCase();
-            if (title.includes(searchTerm) || content.includes(searchTerm)) {
-                post.style.display = '';
-            } else {
-                post.style.display = 'none';
-            }
-        });
     });
 
     function addBlogPost(title, content) {
