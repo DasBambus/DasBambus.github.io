@@ -1,0 +1,13 @@
+/mein-coding-blog
+    /css
+        styles.css
+    /js
+        scripts.js
+    /images
+        sofa.jpg
+        flower.jpg
+    index.html
+    about.html
+    projects.html
+    blog.html
+    contact.html
